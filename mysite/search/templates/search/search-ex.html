@@ -1,0 +1,14 @@
+{% block content %}
+    <center>
+    {%if searched %}
+        <h1>You searched for {{searched}}</h1>
+        <br/>
+        {% for service in services %}
+            {{ service }} <br/>
+        {% endfor %}
+    {% else %}
+        <h1>You forgot to search</h1>
+
+    {% endif %}
+    </center>
+{% endblock %}

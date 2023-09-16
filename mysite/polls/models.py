@@ -20,3 +20,10 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.choice_text
+
+class Service(models.Model):
+    name = models.CharField(max_length=100)
+    organiser = models.CharField(max_length=100)
+    category = models.CharField(max_length=100)
+    def __str__(self):
+        return self.name
